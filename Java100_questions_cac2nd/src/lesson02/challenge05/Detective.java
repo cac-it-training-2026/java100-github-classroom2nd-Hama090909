@@ -1,5 +1,6 @@
 /**
  * 第2章 名探偵のお仕事
+
  *
  * 問題5  犯行現場の捜査①（宝石を置いていた場所）
  *
@@ -48,6 +49,11 @@ public class Detective {
 		System.out.println("犯人は...");
 
 		// ここにif～else文を入れる
+		if (height > 185) {
+			System.out.println("背の高い人ですね");
+		} else {
+			System.out.println("背の低い人ですね");
+		}
 
 	}
 

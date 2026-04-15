@@ -1,5 +1,6 @@
 /**
  * 第2章 名探偵のお仕事
+
  *
  *  * ※lesson05の問題には、前後の問題の文章から推理して解答しなければならないものがあります。
  * 　そのため、各問題は順番に解答してください。
@@ -20,16 +21,16 @@ package lesson02.challenge01;
 
 public class Detective {
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
 
-                boolean request = false;
+		boolean request = true;
 
-                if (request) {
-                        System.out.println("依頼主：");
-                        System.out.println("あなたを名探偵と見込んで");
-                        System.out.println("「盗まれた宝石」の捜索を依頼します。");
-                }
+		if (request) {
+			System.out.println("依頼主：");
+			System.out.println("あなたを名探偵と見込んで");
+			System.out.println("「盗まれた宝石」の捜索を依頼します。");
+		}
 
-        }
+	}
 
 }

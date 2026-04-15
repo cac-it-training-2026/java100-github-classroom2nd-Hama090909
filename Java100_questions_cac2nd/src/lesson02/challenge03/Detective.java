@@ -1,5 +1,6 @@
 /**
  * 第2章 名探偵のお仕事
+
  *
  * 問題3  依頼料は基準を充たしているか？
  *
@@ -22,7 +23,7 @@ public class Detective {
 
 	public static void main(String[] args) {
 
-		int budget = 200;
+		int budget = 501;
 
 		System.out.println("依頼主：");
 		System.out.println("宝石が見つかりましたら");
