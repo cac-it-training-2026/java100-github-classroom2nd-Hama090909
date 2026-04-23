@@ -1,5 +1,6 @@
 /**
  * 第3章 探検隊のお仕事
+
  *
  * 問題10  宝物は滝の奥に
  *
@@ -75,14 +76,34 @@ package lesson03.challenge10;
 
 public class Explorer {
 
-        public static void main(String[] args) {
+	public static void main(String[] args) {
 
-                System.out.println("隊長：");
-                System.out.println("滝の前に着いたよ！\n");
+		System.out.println("隊長：");
+		System.out.println("滝の前に着いたよ！\n");
 
+		//ここにfor文のネスト、if文を利用した処理を記述する。
+		for (int i = 13; i < 17; i++) {
+			for (int j = 0; j < 60; j++) {
+				if (i == 13 && j == 0) {
+					j = 30;
+				}
+				if (i == 16 && j == 30) {
+					System.out.println("隊長；");
+					System.out.printf("%d:%02d 時間になったよ%n%n", i, j);
+					System.out.println("滝の水流が弱くなりました");
+					System.out.println("\nやったー！宝物だー！");
+					break;
+				}
+				if (j % 15 == 0) {
+					System.out.println("隊長；");
+					System.out.printf("%d:%02d 待ち遠しいな～%n%n", i, j);
+				}
+				if (i == 16 && j == 30) {
+					break;
+				}
+			}
 
-                //ここにfor文のネスト、if文を利用した処理を記述する。
+		}
 
-
-        }
+	}
 }

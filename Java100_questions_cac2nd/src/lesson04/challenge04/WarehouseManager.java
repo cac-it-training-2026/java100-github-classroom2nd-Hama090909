@@ -1,5 +1,6 @@
 /**
  * 第4章 倉庫番のお仕事
+
  *
  * 問題4  袋の中身を調べる
  *
@@ -42,9 +43,11 @@ public class WarehouseManager {
 
 	public static void main(String[] args) {
 
-
 		//ここに配列の宣言および値の代入処理を記述する（for文）
-
+		int[] ABkousanArray = new int[5];
+		for (int i = 0; i < ABkousanArray.length; i++) {
+			ABkousanArray[i] = (int) (Math.random() * 10 % 5) + 1;
+		}
 
 		System.out.println("E主任：");
 		System.out.println("AB興産の荷物の検査結果を教えてください。\n");
@@ -54,9 +57,13 @@ public class WarehouseManager {
 
 		boolean hitFlag = false;
 
-
 		//ここに要素の確認および何袋目かの出力処理を記述する
-
+		for (int i = 0; i < ABkousanArray.length; i++) {
+			if (ABkousanArray[i] == 5) {
+				hitFlag = true;
+				System.out.println(i + 1 + "袋目");
+			}
+		}
 
 		if (hitFlag) {
 			System.out.println("に入っていました。");
