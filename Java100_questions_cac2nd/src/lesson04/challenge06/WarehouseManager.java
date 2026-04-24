@@ -39,9 +39,24 @@ public class WarehouseManager {
 
 		int[] ABKosanArray = new int[5];
 
-
 		//ここに重複チェックおよび値の代入処理を記述する
+		int intputNum = 0;
+		boolean loopFlag = false;
 
+		for (int i = 0; i < ABKosanArray.length; i++) {
+			do {
+				loopFlag = false;
+				intputNum = (int) (Math.random() * 10 % 5) + 1;
+				for (int j = 0; j < ABKosanArray.length; j++) {
+					if (ABKosanArray[j] == intputNum) {
+						loopFlag = true;
+						break;
+					}
+				}
+
+			} while (loopFlag);
+			ABKosanArray[i] = intputNum;
+		}
 
 		System.out.println("E主任：");
 		System.out.println("AB興産の荷物の入れ替えをお願いします。\n");
@@ -57,9 +72,34 @@ public class WarehouseManager {
 		}
 		System.out.println("\nです。\n");
 
-
 		//ここに値の入れ替え処理を記述する
+		int array1 = 0;
+		int array3 = 0;
+		for (int i = 0; i < ABKosanArray.length; i++) {
+			if (ABKosanArray[i] == 1) {
+				array1 = i;
+			}
+			if (ABKosanArray[i] == 3) {
+				array3 = i;
+			}
+		}
+		int temprate = ABKosanArray[array1];
+		ABKosanArray[array1] = ABKosanArray[array3];
+		ABKosanArray[array3] = temprate;
 
+		int array2 = 0;
+		int array4 = 0;
+		for (int i = 0; i < ABKosanArray.length; i++) {
+			if (ABKosanArray[i] == 2) {
+				array2 = i;
+			}
+			if (ABKosanArray[i] == 4) {
+				array4 = i;
+			}
+		}
+		int temprate2 = ABKosanArray[array2];
+		ABKosanArray[array2] = ABKosanArray[array4];
+		ABKosanArray[array4] = temprate2;
 
 		System.out.println("入れ替え後の状態は、");
 		for (int i = 0; i < ABKosanArray.length; i++) {
