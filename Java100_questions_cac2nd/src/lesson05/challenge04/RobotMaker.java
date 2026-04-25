@@ -1,5 +1,6 @@
 /**
  * 第5章 ロボット工場のお仕事
+
  *
  * 問題4  機能から別機能を呼び出す
  *
@@ -41,30 +42,46 @@ package lesson05.challenge04;
 //メソッド名：randomWater(引数なし、戻り値void、waterに1～9の乱数を入れるメソッド)
 //メソッドpumpWaterを改修し、randomWater()を呼び出し、
 //「水を【※フィールドwaterの値】リットル出します」に出力を変更する
+class Robot {
+	int water;
+	int enrgy;
+	String name;
 
-public class RobotMaker {
+	void pumpWater() {
+		System.out.println("水を" + water + "リットル出します\n");
+	}
 
-    public static void main(String[] args) {
+	void randomWater() {
+		water = (int) (Math.random() * 9) + 1;
+	}
 
-        System.out.println("Rさん：");
-        System.out.println("でもいつも1リットルじゃつまらないですね。\n");
-        System.out.println("G博士：");
-        System.out.println("じゃあ自分で改造すればいいんじゃ。わしゃ知らん。\n");
-        System.out.println("Rさん：");
-        System.out.println("え、これ改造していいんですか？\n");
-        System.out.println("G博士：");
-        System.out.println("いいぞ。出来るならな。\n");
-        System.out.println("Rさん：");
-        System.out.println("......改造終わりました。\n");
-        System.out.println("G博士：");
-        System.out.println("本当か！どれどれ\n");
+	public class RobotMaker {
 
-        //ここでRobotクラスのインスタンスを作り、
-        //（インスタンス名はrobot）
-        //pumpWaterを実行する。
+	}
 
-        System.out.println("G博士：");
-        System.out.println("......確かに出来とる。\n");
-    }
+	public static void main(String[] args) {
+
+		System.out.println("Rさん：");
+		System.out.println("でもいつも1リットルじゃつまらないですね。\n");
+		System.out.println("G博士：");
+		System.out.println("じゃあ自分で改造すればいいんじゃ。わしゃ知らん。\n");
+		System.out.println("Rさん：");
+		System.out.println("え、これ改造していいんですか？\n");
+		System.out.println("G博士：");
+		System.out.println("いいぞ。出来るならな。\n");
+		System.out.println("Rさん：");
+		System.out.println("......改造終わりました。\n");
+		System.out.println("G博士：");
+		System.out.println("本当か！どれどれ\n");
+
+		//ここでRobotクラスのインスタンスを作り、
+		//（インスタンス名はrobot）
+		//pumpWaterを実行する。
+		Robot robot = new Robot();
+		robot.pumpWater();
+
+		System.out.println("G博士：");
+		System.out.println("......確かに出来とる。\n");
+	}
 
 }
