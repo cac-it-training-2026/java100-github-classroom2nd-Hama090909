@@ -78,7 +78,6 @@ class Retainer extends Samurai {
 		}
 		return match;
 	}
-
 }
 
 //ここにRoninクラスを記述
