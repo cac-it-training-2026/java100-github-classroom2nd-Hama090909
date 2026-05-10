@@ -1,5 +1,6 @@
 /**
  * 第8章 保育園のお仕事
+
  *
  * 問題1  ファイルの分割
  *
@@ -10,65 +11,30 @@
  *
  */
 
-package lesson08.challenge01;
+package lesson13_14.challenge03.Nurserry.main;
 
-class Nurse {
-    private String name;
-
-    public Nurse(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-}
-
-class NurserySchoolChild {
-
-    private String name;
-
-    public NurserySchoolChild(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    void Play(){
-        System.out.println("遊ぶよ～。");
-    }
-
-}
+import lesson09.challenge01.Nurserry.logic.Nurse;
+import lesson09.challenge01.Nurserry.logic.NurserySchoolChild;
 
 public class NurserySchool {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Nurse nurse1 = new Nurse("保育太郎");
-        Nurse nurse2 = new Nurse("保育次郎");
-        Nurse nurse3 = new Nurse("保育三郎");
+		Nurse nurse1 = new Nurse("保育太郎");
+		Nurse nurse2 = new Nurse("保育次郎");
+		Nurse nurse3 = new Nurse("保育三郎");
 
-        System.out.println(nurse1.getName() + "が出勤しました。");
-        System.out.println(nurse2.getName() + "が出勤しました。");
-        System.out.println(nurse3.getName() + "が出勤しました。");
+		System.out.println(nurse1.getName() + "が出勤しました。");
+		System.out.println(nurse2.getName() + "が出勤しました。");
+		System.out.println(nurse3.getName() + "が出勤しました。");
 
-        NurserySchoolChild child1 = new NurserySchoolChild("園児①");
-        NurserySchoolChild child2 = new NurserySchoolChild("園児②");
-        NurserySchoolChild child3 = new NurserySchoolChild("園児③");
+		NurserySchoolChild child1 = new NurserySchoolChild("園児①");
+		NurserySchoolChild child2 = new NurserySchoolChild("園児②");
+		NurserySchoolChild child3 = new NurserySchoolChild("園児③");
 
-        System.out.println(child1.getName() + "が登園しました。");
-        System.out.println(child2.getName() + "が登園しました。");
-        System.out.println(child3.getName() + "が登園しました。");
-    }
+		System.out.println(child1.getName() + "が登園しました。");
+		System.out.println(child2.getName() + "が登園しました。");
+		System.out.println(child3.getName() + "が登園しました。");
+	}
 
 }
