@@ -1,5 +1,6 @@
 /**
  * 第4章 倉庫番のお仕事
+
  *
  * 問題12 荷物そろえ
  *
@@ -99,9 +100,20 @@ public class WarehouseManager {
 
 		System.out.println("\n\nでした。直してきます...\n");
 
-
 		//ここに適切な値の挿入処理を記述する
+		int p = 0;
+		int sum = 0;
+		for (int i = 0; i < wonderfulArray.length; i++) {
+			sum += wonderfulArray[i];
+		}
+		p = 15 - sum;
 
+		for (int i = 0; i < wonderfulArray.length; i++) {
+			if (wonderfulArray[i] == 0) {
+				wonderfulArray[i] = p;
+				break;
+			}
+		}
 
 		System.out.println("Yさん：");
 		System.out.println("直してきました。\n");

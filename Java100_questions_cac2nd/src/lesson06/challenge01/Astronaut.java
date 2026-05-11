@@ -1,5 +1,6 @@
 /**
  * 第6章 宇宙飛行士のお仕事
+
  *
  * 問題1  宇宙船の気密を保つ
  *
@@ -19,17 +20,17 @@
 package lesson06.challenge01;
 
 class Spaceship {
-    int air;
+	private int air;
 }
 
 public class Astronaut {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        Spaceship spaceship = new Spaceship();
+		Spaceship spaceship = new Spaceship();
 
-        spaceship.air = -10;
+		spaceship.air = -10;
 
-    }
+	}
 
 }

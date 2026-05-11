@@ -1,5 +1,6 @@
 /**
  * 第7章 武士のお仕事
+
  *
  * 問題6  finalを付ける
  *
@@ -25,31 +26,33 @@ package lesson07.challenge06;
 
 class Samurai {
 
-    void fight() {
-        System.out.println("戦うよ～。");
-    }
+	void fight() {
+		System.out.println("戦うよ～。");
+	}
 
-    void work() {
-        System.out.println("何かして働くよ～");
-    }
+	void work() {
+		System.out.println("何かして働くよ～");
+	}
 
 }
 
-
 //ここにUltimateSwordsmanクラスを記述
+final class UltimateSwordsman extends Samurai {
 
+}
 
 //ここにEasySwordsmanクラスを記述
+class EasySwordman extends UltimateSwordman {
 
+}
 
 public class CastleTown {
 
-    public static void main(String[] args) {
-        System.out.println("究極の剣豪クラスを継承してみます。\n");
+	public static void main(String[] args) {
+		System.out.println("究極の剣豪クラスを継承してみます。\n");
 
+		//ここにEasySwordsmanクラスのオブジェクト生成処理を記述
+		EasySwordman easySwordman = new EasySwordman();
 
-       //ここにEasySwordsmanクラスのオブジェクト生成処理を記述
-
-
-    }
+	}
 }

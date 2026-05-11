@@ -1,5 +1,6 @@
 /**
  * 第4章 倉庫番のお仕事
+
  *
  * 問題11 荷物の入れ替え（三つの配列をまとめる）
  *
@@ -59,19 +60,31 @@
  *  ご苦労さまでした。
  *
  */
-
 package lesson04.challenge11;
 
 public class WarehouseManager {
 
 	public static void main(String[] args) {
 
-
 		//ここに必要な配列の宣言を記述する。
+		int[] MQc = new int[5];
+		int[] MQd = new int[5];
+		int[] MQe = new int[5];
 
+		boolean loopFlag = false;
+
+		int[][] MQArrayAll = new int[3][5];
+		MQArrayAll[0] = MQc;
+		MQArrayAll[1] = MQd;
+		MQArrayAll[2] = MQe;
 
 		//ここに配列に値を代入する処理を記述する。(要素はランダム)
+		for (int i = 0; i < MQc.length; i++) {
+			MQc[i] = (Math.random() < 0.25) ? 0 : (int) (Math.random() * 10) + 1;
+			MQd[i] = (Math.random() < 0.25) ? 0 : (int) (Math.random() * 10) + 1;
+			MQe[i] = (Math.random() < 0.25) ? 0 : (int) (Math.random() * 10) + 1;
 
+		}
 
 		System.out.println("E主任：");
 		System.out.println("MQ運送の件、お願いします。\n");
@@ -81,49 +94,100 @@ public class WarehouseManager {
 
 		System.out.print("C...");
 
-
 		//ここに配列Cの要素をすべて出力する処理を記述する。
-
+		for (int i = 0; i < MQc.length; i++) {
+			System.out.print(MQc[i]);
+			if (i != (MQc.length - 1)) {
+				System.out.print(",");
+			}
+		}
 
 		System.out.print("\n\nD...");
 
-
 		//ここに配列Dの要素をすべて出力する処理を記述する。
-
-
+		for (int i = 0; i < MQd.length; i++) {
+			System.out.print(MQd[i]);
+			if (i != (MQd.length - 1)) {
+				System.out.print(",");
+			}
+		}
 		System.out.print("\n\nE...");
 
-
 		//ここに配列Eの要素をすべて出力する処理を記述する。
-
+		for (int i = 0; i < MQe.length; i++) {
+			System.out.print(MQe[i]);
+			if (i != (MQe.length - 1)) {
+				System.out.print(",");
+			}
+		}
 
 		System.out.println("\n\nでした。直してきます...\n");
 
+		//ここに詰め替え処理を記述
+		int[] isArray = new int[15];
+		for (int i = 0; i < isArray.length; i++) {
+			isArray[i] = -1;
+		}
+		int k = 0;
+		for (int i = 0; i < MQArrayAll.length; i++) {
+			for (int j = 0; j < MQArrayAll[0].length; j++) {
+				if (MQArrayAll[i][j] == 0) {
+					continue;
+				} else {
+					isArray[k] = MQArrayAll[i][j];
+					MQArrayAll[i][j] = 0;
+					k++;
+				}
+			}
 
-		//ここに詰め替え処理を記述する
+		}
+		k = 0;
 
+		for (int i = 0; i < MQArrayAll.length; i++) {
+			for (int j = 0; j < MQArrayAll[0].length; j++) {
+				MQArrayAll[i][j] = isArray[k];
+				k++;
+				if (isArray[k] == -1) {
+					loopFlag = true;
+					break;
+				}
+			}
+			if (loopFlag) {
+				break;
+			}
+		}
 
 		System.out.println("Yさん：");
 		System.out.println("直してきました。\n");
 
 		System.out.print("C...");
 
-
 		//ここに配列Cの要素をすべて出力する処理を記述する。
-
+		for (int i = 0; i < MQc.length; i++) {
+			System.out.print(MQc[i]);
+			if (i < (MQc.length - 1)) {
+				System.out.print(",");
+			}
+		}
 
 		System.out.print("\n\nD...");
 
-
 		//ここに配列Dの要素をすべて出力する処理を記述する。
-
-
+		for (int i = 0; i < MQd.length; i++) {
+			System.out.print(MQd[i]);
+			if (i < (MQd.length - 1)) {
+				System.out.print(",");
+			}
+		}
 		System.out.print("\n\nE...");
 
-
 		//ここに配列Eの要素をすべて出力する処理を記述する。
-
-
+		for (int i = 0; i < MQe.length; i++) {
+			System.out.print(MQe[i]);
+			if (i < (MQe.length - 1)) {
+				System.out.print(",");
+			}
+		}
 		System.out.println("\n\nになりました。\n");
 
 		System.out.println("E主任：");

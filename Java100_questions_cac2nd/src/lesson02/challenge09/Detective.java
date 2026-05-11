@@ -1,5 +1,6 @@
 /**
  * 第2章 名探偵のお仕事
+
  *
  * 問題9 容疑者の絞り込み
  *
@@ -67,7 +68,13 @@ public class Detective {
 		int weight = Integer.parseInt(weightStr);
 
 		//ここに記述
-
+		if (height > 185 && (weight < 80 && weight >= 60)) {
+			System.out.println("探偵；");
+			System.out.println("その方は犯人である可能性がありますね。");
+		} else {
+			System.out.println("探偵；");
+			System.out.println("その方は犯人ではありませんね。");
+		}
 	}
 
 }
